@@ -14,7 +14,7 @@ Performance Metrics: Evaluate model performance using accuracy, precision, recal
 - TensorFlow or PyTorch
 - NumPy
 - Matplotlib
-- 
+  
 ## Getting Started
 - Clone the repository: git clone <repository-url>
 - Install required dependencies: pip install -r requirements.txt
