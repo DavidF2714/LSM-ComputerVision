@@ -4,22 +4,16 @@ This project aims to develop a computer vision model to recognize and analyze Me
 ## Features
 Gesture Recognition: Identify and classify various signs from LSM using a convolutional neural network (CNN).
 Real-Time Analysis: Implement real-time recognition capabilities using webcam input.
-Dataset Utilization: Utilize publicly available datasets of LSM signs or create a custom dataset through video recordings.
+Dataset Utilization: Created our own LSM dataset with the helo of ITESM students.
 User-Friendly Interface: Develop an intuitive interface that displays recognized signs and their meanings.
-Performance Metrics: Evaluate model performance using accuracy, precision, recall, and F1-score.
+Performance Metrics: Evaluate model performance using accuracy.
 
 ## Technologies Used
 - Python
 - OpenCV
-- TensorFlow or PyTorch
+- PyTorch
 - NumPy
 - Matplotlib
-  
-## Getting Started
-- Clone the repository: git clone <repository-url>
-- Install required dependencies: pip install -r requirements.txt
-- Prepare your dataset or use the provided sample data.
-- Run the main script to start the gesture recognition.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
