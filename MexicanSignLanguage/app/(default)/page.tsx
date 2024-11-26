@@ -6,7 +6,6 @@ export const metadata = {
 import MainHeader from '@/components/MainHeader'
 import About from '@/components/About'
 import PredictionTool from '@/components/ImagePredictor'
-import Symptoms from '@/components/Symptoms'
 import Overview from '@/components/Overview'
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <MainHeader />
       <About />
       <Overview />
-      <Symptoms />
       <PredictionTool />
     </>
   )

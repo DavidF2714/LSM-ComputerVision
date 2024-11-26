@@ -7,8 +7,8 @@ export default function About() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">About this project</h2>
-            <p className="text-xl text-gray-400">Discover How Our Platform Helps You Stay Informed and Protected Against Mpox.</p>
+            <h2 className="h2 mb-4">Acerca de nuestro proyecto</h2>
+            <p className="text-xl text-gray-400">Descubre como esta plataforma ayuda a la interpetación de la LSM y sus beneficios.</p>
           </div>
 
           {/* Items */}
@@ -21,8 +21,8 @@ export default function About() {
                 <path className="stroke-current text-purple-100" d="M30 39.313l-4.18 2.197L27 34.628l-5-4.874 6.91-1.004L32 22.49l3.09 6.26L42 29.754l-3 2.924" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd" />
                 <path className="stroke-current text-purple-300" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
               </svg>
-              <h4 className="h4 mb-2 m-auto">What is Mpox Predictor?</h4>
-              <p className="text-lg text-gray-400 text-center">Mpox Predictor is an innovative platform designed to help individuals quickly assess their risk of Mpox (Monkeypox) infection using machine learning. </p>
+              <h4 className="h4 mb-2 m-auto">¿Qué hace la herramienta?</h4>
+              <p className="text-lg text-gray-400 text-center"> Nuestro Intérprete de LSM es una herramienta diseñada para reconocer cada letra en la Lengua de Señas Mexicana mediante un modelo de redes neuronales para el reconocimiento de imágenes.</p>
             </div>
 
             {/* 2nd item */}
@@ -32,9 +32,10 @@ export default function About() {
                 <path className="stroke-current text-purple-100" strokeWidth="2" strokeLinecap="square" d="M21 23h22v18H21z" fill="none" fillRule="evenodd" />
                 <path className="stroke-current text-purple-300" d="M26 28h12M26 32h12M26 36h5" strokeWidth="2" strokeLinecap="square" />
               </svg>
-              <h4 className="h4 mb-2">Why this platform?</h4>
+              <h4 className="h4 mb-2">¿Por qué este proyecto?</h4>
               <p className="text-lg text-gray-400 text-center">
-              Our mission is to utilize the power of artificial intelligence to provide accessible and easy-to-use tools for early detection of Mpox. By doing this we hope to promote awareness, and encourage proactive health management.</p>
+              Éste proyecto tiene como propósito, mediante la interpretación de la LSM, facilitar la interacción y comunicación con las personas de la comunidad sorda y de esta manera fomentar la inclusión de este sector de la población mediante el uso de la tecnología.
+              </p>
             </div>
 
             {/* 3rd item */}
@@ -47,8 +48,8 @@ export default function About() {
                   <circle className="stroke-current text-purple-100" cx="11" cy="11" r="11" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">How It Works</h4>
-              <p className="text-lg text-gray-400 text-center">The platform leverages a machine learning model trained on data related to Mpox symptoms and infection patterns. By analyzing user-provided data, the model predicts the likelihood of an Mpox infection, offering a risk assessment that users can discuss with healthcare professionals.</p>
+              <h4 className="h4 mb-2">¿Cómo funciona?</h4>
+              <p className="text-lg text-gray-400 text-center">La plataforma hace uso de un modelo de Machine Learning entrenado con las imágenes de cada una de las letras del abecedario del LSM. Mediante el análisis de imágenes recopiladas previamente, el modelo hace una predicción de la letra que la persona está gesticulando imagen por imagen, para de esta forma hacer una traducción fiel. </p>
             </div>
 
             {/* 4th item */}
@@ -60,8 +61,8 @@ export default function About() {
                   <circle className="stroke-current text-purple-300" cx="13" cy="9" r="3" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Benefits of our platform</h4>
-              <p className="text-lg text-gray-400 text-center">With our platform, you can receive a preliminary risk assessment without the need for a clinic visit. This tool is ideal for early-stage identification, allowing you to take action swiftly and seek medical advice when needed. It's fast, accessible, and user-friendly.</p>
+              <h4 className="h4 mb-2">Beneficios de la plataforma</h4>
+              <p className="text-lg text-gray-400 text-center">Los principales beneficios que nuestra plataforma puede ofrecer incluyen el facilitar la comunicación inmediata entre personas sordas y oyentes, rompiendo barreras lingüísticas, además de permitir que personas oyentes aprendan LSM de manera interactiva, observando las correspondencias entre las señas y las letras en tiempo real.</p>
             </div>
 
             {/* 5th item */}
@@ -73,8 +74,8 @@ export default function About() {
                   <path className="stroke-current text-purple-300" d="M22 30h4v12h-4z" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Our Commitment to Privacy</h4>
-              <p className="text-lg text-gray-400 text-center">We understand the importance of privacy and data security. Any information submitted on our platform is kept confidential and used solely for the purpose of generating your Mpox risk assessment. We do not store personal health data beyond what is necessary for analysis.</p>
+              <h4 className="h4 mb-2">Nuestro compromiso con la privacidad</h4>
+              <p className="text-lg text-gray-400 text-center">Comprendemos la importancia de la privacidad y la seguridad de los datos. Toda la información enviada a nuestra plataforma se mantiene confidencial y se utiliza únicamente con el fin de generar la interpretación de LSM. No almacenamos datos personales más allá de lo necesario para el análisis y predicción.</p>
             </div>
 
             {/* 6th item */}
@@ -87,8 +88,8 @@ export default function About() {
                   <path className="stroke-current text-purple-100" d="M8.86 1.18C3.8 1.988 0 5.6 0 10c0 5 4.9 9 11 9a10.55 10.55 0 003.1-.4L20 21l-.6-5.2a9.125 9.125 0 001.991-2.948" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Get Started Today</h4>
-              <p className="text-lg text-gray-400 text-center">Dive into our comprehensive resources on Mpox, explore symptoms, prevention tips, and more. If you're ready, try our prediction tool and see how artificial intelligence can assist in safeguarding your health against Mpox.</p>
+              <h4 className="h4 mb-2">Empieza hoy</h4>
+              <p className="text-lg text-gray-400 text-center">Explora nuestros recursos de información en cuanto a la Lengua de Señas Mexicana, su importancia dentro de la sociedad y más. Si está listo, pruebe nuestra herramienta y vea como la inteligencia artificial puede ayudar a una mejor y más eficiente inclusión de la comunidad sordomuda en México.</p>
             </div>
 
           </div>

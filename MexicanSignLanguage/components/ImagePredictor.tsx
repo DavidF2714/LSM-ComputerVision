@@ -44,7 +44,7 @@ export default function TryItOut() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Try It Out</h1>
+      <h1 className={styles.title}>Haz la prueba</h1>
       <div className={styles.webcamContainer}>
         <Webcam
           ref={webcamRef}
@@ -52,12 +52,12 @@ export default function TryItOut() {
           className={styles.webcam}
         />
         <button className={styles.captureButton} onClick={captureImage}>
-          Capture Image
+          Capturar Imagen
         </button>
       </div>
       {image && (
         <div className={styles.imagePreview}>
-          <h3 className={styles.subtitle}>Captured Image:</h3>
+          <h3 className={styles.subtitle}>Imagen capturada:</h3>
           <img src={image} alt="Captured" className={styles.previewImage} />
         </div>
       )}
@@ -67,12 +67,12 @@ export default function TryItOut() {
           onClick={handlePrediction}
           disabled={loading}
         >
-          {loading ? "Predicting..." : "Get Prediction"}
+          {loading ? "Obteniendo predicción" : "Obtener predicción"}
         </button>
       </div>
       {prediction && (
         <div className={styles.predictionResult}>
-          <h3 className={styles.subtitle}>Prediction Result:</h3>
+          <h3 className={styles.subtitle}>Resultado de la predicción:</h3>
           <p className={styles.prediction}>{prediction}</p>
         </div>
       )}

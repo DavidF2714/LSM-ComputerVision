@@ -1,18 +1,4 @@
 
-const VideoEmbed = () => {
-  return (
-    <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', background: '#000' }}>
-      <iframe
-        src="https://www.youtube.com/embed/XvgBrwD1fXE"
-        title="Mpox Information Video"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-      ></iframe>
-    </div>
-  );
-};
 
 export default function MainHeader() {
   return (
@@ -37,16 +23,14 @@ export default function MainHeader() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Monkeypox Predictor</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Empowering Early Detection with Machine Learning.</p>
+            <h1 className="h1 mb-4" data-aos="fade-up">Intérprete de Lengua de Señas Mexicana (LSM)</h1>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Empoderando la inclusión con el uso de Machine Learning.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#pred-tool">Go to Prediction Tool</a>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#pred-tool">Ir a la Herramienta</a>
               </div>
             </div>
           </div>
-
-            <VideoEmbed />
 
         </div>
 
