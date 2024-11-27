@@ -32,28 +32,22 @@ export default function Header() {
                   href="#About"
                   className="font-medium hover:text-gray-500 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  About
+                  Acerca de
                 </Link>
               </li>
               <li>
                 <Link href="#Overview" 
                   className="font-medium hover:text-gray-500 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   >
-                  Mpox Overview
+                  Acerca de la LSM
                 </Link>
               </li>
-              <li>
-                <Link href="#Symptoms" 
-                  className="font-medium hover:text-gray-500 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                  Symptoms
-                </Link>
-              </li>
+            
               <li>
                 <Link href="#predictionTool" 
                   className="font-medium hover:text-gray-500 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                   >
-                  Prediction Tool
+                  Herramienta de predicción
                 </Link>
               </li>
             </ul>
