@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_file
+from flask_cors import CORS
 import nbimporter
 import os
 import cv2
@@ -7,11 +8,10 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import sys
+import base64
 import torch
-from torchvision.datasets import ImageFolder
 import joblib
-
-print("asssssssssss: ", torch.cuda.is_available())
+from torchvision.models import EfficientNet_B4_Weights
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -19,26 +19,23 @@ from Miscellaneous import cropped_images
 from Utils.LSM_Model import LSMCnnModel
 import model as m
 
+weights = EfficientNet_B4_Weights.IMAGENET1K_V1
+preprocess_transform = weights.transforms()
+
 mp_hands = mp.solutions.hands
 
-UPLOAD_FOLDER = './uploads'
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
 # Load the trained model
-# model = joblib.load('model/lsm_cnn_model.pkl')
-model = torch.load('model/lsm_cnn_model.pkl', map_location=torch.device('cpu'))
-
-# device = torch.device("cpu")
-# model = model.to(device)
-# model.eval()
+model = joblib.load('model/lsm_cnn_model.pkl')
 
 app = Flask(__name__)
+
+CORS(app, resources = {r"/api/*": {"origins": "http://localhost:3000"}})
 
 @app.route('/')
 def home():
     return "Welcome to the Flask Server for image predictions!"
 
-@app.route("/crop/test", methods=["POST"])
+@app.route("/api/predict/sign", methods=["POST"])
 def crop():
     # Check if a file is included
     if 'file' not in request.files:
@@ -74,10 +71,11 @@ def crop():
         cropped_image = image[y_min:y_max, x_min:x_max]
     
     ### START 
-    img = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2RGB)
-   
+    # img = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2RGB)
+    cropped_pil_image = Image.fromarray(cv2.cvtColor(cropped_image, cv2.COLOR_BGR2RGB)).convert("RGB")
+
     # Preprocesa la imagen de prueba para el modelo
-    preprocessed_image = m.preprocess_transform(img).unsqueeze(0)
+    preprocessed_image = preprocess_transform(cropped_pil_image).unsqueeze(0)
 
     # Cambia el modelo a modo de evaluación
     model.eval()
@@ -89,16 +87,17 @@ def crop():
     # Obtén la clase predicha
     predicted_class = torch.argmax(prediction).item()
 
-      # Return the prediction as a JSON response
-    return jsonify({'prediction class': predicted_class})
-        
-        # # Convert cropped image to bytes for response
-        # _, buffer = cv2.imencode('.jpg', cropped_image)
-        # cropped_image_bytes = BytesIO(buffer)
+     # Convert cropped PIL image to Base64
+    buffered = BytesIO()
+    cropped_pil_image.save(buffered, format="JPEG")
+    cropped_image_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
-        # return send_file(cropped_image_bytes, mimetype='image/jpeg', as_attachment=False)
-
+    # Return the prediction and the cropped image as a JSON response
+    return jsonify({
+        'prediction': predicted_class,
+        'cropped_image': f"data:image/jpeg;base64,{cropped_image_base64}"
+    })
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port = 3000)
+    app.run(debug=True, host="10.49.12.59", port = 1337)
